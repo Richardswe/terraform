@@ -1,0 +1,3 @@
+# To be able to connect to your newly created cluster, can we download the kube-config file from Horizon/Binero portal. 
+# 1. Go in under CONTAINER INFRA, choose Cluster and then hover over to the right of the cluster you want to connect to, to the right choose more and then hämta certifcat. Download it and place it under /home/youruser/.kube/
+# Be sure to save your other kube-config files and make backups of them. 

@@ -1,0 +1,17 @@
+# Different OpenStack commands
+#
+# List flavors
+openstack flavor list
+
+# List internal or external networks
+openstack network list --internal  
+
+# List images
+openstack image list
+
+# List subnets
+subnet list
+
+# List availability zones
+openstack availability zone list
+

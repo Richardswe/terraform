@@ -1,0 +1,37 @@
+# Installation guide how to connect to your OpenStack public cloud
+
+# link for more details https://docs.ventuscloud.eu/tutorials-advanced/installation-openstack-cli/  
+# https://docs.openstack.org/magnum/rocky/user/index.html#python-client
+#  
+# Link https://linuxconfig.org/how-to-change-from-default-to-alternative-python-version-on-debian-linux 
+# Make python3.8 to default version
+# run as root
+su root
+
+# update-alternatives --list python
+update-alternatives: error: no alternatives for python
+
+# update-alternatives --install /usr/bin/python python /usr/bin/python2.7 1
+update-alternatives: using /usr/bin/python2.7 to provide /usr/bin/python (python) in auto mode
+# update-alternatives --install /usr/bin/python python /usr/bin/python3.6 2
+update-alternatives: using /usr/bin/python3.6 to provide /usr/bin/python (python) in auto mode
+# update-alternatives --install /usr/bin/python python /usr/bin/python3.8 3
+update-alternatives: using /usr/bin/python3.8 to provide /usr/bin/python (python) in auto mode
+
+# Switch between the different versions
+update-alternatives --config python
+
+sudo apt update
+sudo apt install python3-pip
+
+python3.8 -m pip install python-openstackclient
+python3.8 -m pip install python-magnumclient
+python3.8 -m pip install python-octaviaclient
+
+
+# Download the openrc file from the Horizon dashboard/ your cloud provider's dashboard. 
+# run source openrc and paste your password for the api-user. 
+# check if you can interact with magnum
+openstack coe cluster list
+#
+openstack coe cluster template list | awk NR==4'{ print $2 }
