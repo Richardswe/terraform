@@ -1,4 +1,4 @@
-# terraform
+# Terraform
 Different Terraform scripts that I've made :) 
 
 - Create VM in Proxmox
@@ -7,7 +7,7 @@ Different Terraform scripts that I've made :)
 
 github: https://github.com/richardswe
 
-Platforms
+## Platforms
 ------------------
 OpenStack
 In this case i used Binero.
@@ -22,22 +22,29 @@ And Proxmox to provision VM's :)
 Openstack commands
 
 # Different OpenStack commands
-#
-# List flavors
+## List flavors
+```bash
 openstack flavor list
-
-# List internal or external networks
+```
+## List internal or external networks
+```bash
 openstack network list --internal  
+```
 
-# List images
+## List images
+```bash
 openstack image list
+```
 
-# List subnets
-subnet list
+## List subnets
+```bash
+openstack subnet list
+```
 
-# List availability zones
+## List availability zones
+```bash
 openstack availability zone list
-
+```
 ----------
 Kubeconfig
 Connect to your cluster
