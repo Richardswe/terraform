@@ -30,39 +30,39 @@ variable "" {
     default = ""
 }
 variable "" {
-    string
+    string = ""
     default = ""
 }
 variable "" {
-    string
+    string = ""
     default = ""
 }
 # Proxmox nodes
-variable "hq-01" {
-    string
-    default = "hq-pve-01"
+variable "proxmox-01" {
+    string = ""
+    default = "pve-01"
 }
 variable "" {
-    string
+    string = ""
     default = ""
 }
 variable "" {
-    string
+    string = ""
     default = ""
 }
 # Proxmox OS-template
 variable "template" {
-    string
+    string = ""
     default = "oSuse-15-cloud-init"
 }
 # Proxmox Storage-box
 variable "storage-box" {
-    string
-    default = "ibmv3700"
+    string = ""
+    default = "ibm-storage"
 }
 # Network configurations; Vlan
 variable "vlan-name" {
-    string 
-    default = "VL1337"
+    string = "" 
+    default = "VL10"
 }
 
