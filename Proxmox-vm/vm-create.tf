@@ -6,7 +6,7 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
 
     # Node name has to be the same name as within the cluster
     # this might not include the FQDN
-    target_node = "hq-pve-01"
+    target_node = "pve-01"
 
     # The destination resource pool for the new VM
  #   pool = "pool0"
@@ -28,7 +28,7 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
 
     # Setup the disk
     disk {
-        storage = "ibmv3700"
+        storage = "ibm-storage"
         type = "virtio"
         size = "24G"
     }
@@ -36,7 +36,7 @@ resource "proxmox_vm_qemu" "cloudinit-test" {
     # Setup the network interface and assign a vlan tag: 256
     network {
         model = "virtio"
-        bridge = "VL1337"
+        bridge = "VL10"
     #    tag = 256
     }
 
